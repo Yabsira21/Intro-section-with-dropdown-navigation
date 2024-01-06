@@ -1,0 +1,291 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.5s all;
+}
+
+html {
+  overflow-y: hidden;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Epilogue", sans-serif;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 8%);
+  overflow-y: hidden;
+}
+
+nav {
+  display: flex;
+  align-items: flex-start;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.hamburger {
+  position: absolute;
+  right: 5%;
+  display: none;
+  z-index: 15;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  z-index: 5;
+  display: none;
+}
+
+nav li {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.main-links > li {
+  position: relative;
+}
+
+.drop-down-1 {
+  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.156);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  width: 200%;
+  top: 2rem;
+  right: 0;
+  display: none;
+}
+
+.drop-down-2 {
+  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.156);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  top: 2rem;
+  display: none;
+}
+
+.drop-down-1 li,
+.drop-down-2 li {
+  margin: 0.35rem 0;
+  padding-left: 1rem;
+}
+
+.drop-down-2 li {
+  padding-left: 0;
+}
+
+.drop-down-1 li img {
+  margin-right: 0.5rem;
+}
+
+.main-links > li:hover .drop-down-1,
+.main-links > li:hover .drop-down-2 {
+  display: flex;
+}
+
+.logo {
+  margin-right: 4rem;
+}
+
+li > span {
+  font-size: 0.9rem;
+  color: (0, 0%, 41%);
+}
+
+.main-links {
+  display: flex;
+}
+
+.main-links > li {
+  margin-right: 2.5rem;
+}
+
+.nav-btns {
+  margin-top: 0.15rem;
+  margin-left: auto;
+  font-size: 0.95rem;
+}
+
+.login,
+.reg {
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.reg {
+  border: 1px solid black;
+  border-radius: 1rem;
+  margin-left: 1rem;
+}
+
+.main {
+  display: flex;
+  max-width: 73.85rem;
+  margin: 0 auto;
+}
+
+.main-description {
+  padding: 6.5rem 9rem 0 2.25rem;
+}
+
+.main-description h1 {
+  font-size: 4.875rem;
+  margin-bottom: 3rem;
+}
+
+.main-description p {
+  line-height: 1.75rem;
+  padding-right: 4rem;
+  margin-bottom: 4.35rem;
+  color: hsl(0, 0%, 41%);
+}
+
+.main-description a {
+  padding: 1.15rem 1.85rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+
+.main-description a:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.main-clients {
+  margin-top: 8rem;
+  display: flex;
+  align-items: center;
+}
+
+.main-clients img:not(:last-of-type) {
+  margin-right: 2.5rem;
+}
+/* .hero {
+  height: 40rem;
+  width: 30rem;
+} */
+
+.mobile-hero {
+  height: 40rem;
+  width: 30rem;
+}
+
+@media (max-width: 400px) {
+  /* .main-links {
+    display: none;
+  }
+  .nav-btns {
+    display: none;
+  } */
+  /* .overlay {
+    display: none;
+  } */
+  .main-links {
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    padding: 4rem 0;
+    display: none;
+  }
+  .main-links > li {
+    padding: 1rem;
+    width: 100%;
+    /* background-color: yellow; */
+  }
+
+  .drop-down-1,
+  .drop-down-2 {
+    position: static;
+    box-shadow: none;
+    padding-left: 0;
+  }
+
+  .drop-down-1 li,
+  .drop-down-2 li {
+    padding: 0.5rem 0;
+  }
+
+  .nav-btns {
+    position: absolute;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 1rem;
+    right: 0;
+    width: 65%;
+    padding: 0 1rem;
+    display: none;
+  }
+  .reg {
+    width: 100%;
+    text-align: center;
+  }
+  nav {
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+  }
+  .main {
+    flex-direction: column-reverse;
+  }
+  .hamburger {
+    display: block;
+  }
+  .mobile-hero {
+    width: 23.41rem;
+    height: 100%;
+  }
+  .main-description {
+    padding: 1rem;
+    text-align: center;
+  }
+  .main-description h1 {
+    font-size: 2rem;
+  }
+  .main-description p {
+    padding-right: 0;
+  }
+
+  .main-clients {
+    justify-content: space-between;
+    margin-top: 5rem;
+  }
+  .main-clients img {
+    height: 20px;
+  }
+  .main-clients img:not(:last-of-type) {
+    margin: 0;
+  }
+}
